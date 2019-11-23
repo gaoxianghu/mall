@@ -11,7 +11,7 @@ public class LeetCodeTest {
 
     @Test
     public void test(){
-
+        System.out.println("test");
     }
 
     public int numJewelsInStones(String J, String S) {
