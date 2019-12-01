@@ -10,8 +10,30 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class LeetCodeTest {
 
     @Test
-    public void test() {
-        System.out.println("test");
+    public void test(){
+        System.out.println("test ----");
+
+    }
+
+    public String defangIPaddr(String address) {
+        return address.replaceAll("\\.", "[.]");
+//        return null;
+    }
+
+    public int removeDuplicates(int[] nums) {
+        if (nums.length < 2) {
+            return nums.length;
+        }
+        int i=0;
+        for (int j=1;j<nums.length;j++) {
+            if (nums[j] == nums[i]) {
+                continue;
+            } else {
+                i++;
+                nums[i] = nums[j];
+            }
+        }
+        return i + 1;
     }
 
     public int numJewelsInStones(String J, String S) {
